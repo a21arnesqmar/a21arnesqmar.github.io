@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <title>GAMD</title>
+</head>
+
+<body style="margin: 0;
+padding: 50px 600px;
+display: block;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 100vh;
+background: #260430;
+font-family:consolas;">
+    <a href="home.html" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        GAMD
+    </a>
+</body>
+
+<div class="wrapper" style="display: block; margin-top: 150px;">
+    <img src="Imagenes/cookies.jpeg" alt="Consentimiento Cookies">
+    <div class="content">
+      <header>Consentimiento de Cookies</header>
+      <p>Esta web utiliza cookies para ofrecer una mejor experiencia al usuario.</p>
+      <div class="buttons">
+        <button class="item">Lo entiendo</button>
+        <a href="https://entreunosyceros.net/politica-de-cookies" class="item">Saber más</a>
+      </div>
+    </div>
+  </div>
+  <!-- Script para manejar el consentimiento de cookies -->
+  <script>
+    const cookieBox = document.querySelector(".wrapper"),
+      acceptBtn = cookieBox.querySelector("button");
+    acceptBtn.onclick = () => {
+      // Configuramos la cookie por 1 mes, después de un mes caducará automáticamente
+      document.cookie = "CookieBy=entreunosyceros; max-age=" + 60 * 60 * 24 * 30;
+      if (document.cookie) { // Si la cookie está configurada
+        cookieBox.classList.add("hide"); // Escondemos la caja de las cookies
+      } else { // Si la cookie no se puede configurar, se muestra el siguiente error
+        alert("¡No se puede configurar la cookie! Por favor, desbloquea este sitio desde la configuración de cookies de tu navegador.");
+      }
+    }
+    let checkCookie = document.cookie.indexOf("CookieBy=entreunosyceros"); //comprobamos la cookie
+    //si la cookie está configurada, ocultamos el cuadro de cookies; de lo contrario, se mostrará
+    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+  </script>
+
+
+</script>
+
+</html>

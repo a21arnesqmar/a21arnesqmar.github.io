@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de solicitud de página web</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+    
+      /* Estilos para el formulario */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+        color: whitesmoke;
+      }
+
+      label {
+        font-size: 18px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+      }
+
+      input[type="text"], input[type="email"], textarea {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        width: 50%;
+      }
+
+      textarea {
+        height: 150px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(21, 2, 34);">
+
+    <nav>
+      <div class="logo">
+          <a href="Index.html"><img src="Imagenes/GAMD.png" alt="Logo de la página"></a>
+      </div>
+      <ul class="menu">
+          <li><a href="Index.html" class="boton">Inicio</a></li>
+          <li><a href="home.html" class="boton">Home</a></li>
+          <li><a href="Nosotros.html" class="boton">Nosotros</a></li>
+          <li><a href="#" class="boton">Contactanos</a></li>
+      </ul>
+  </nav>
+
+    <h1 style="text-align: center; color: whitesmoke; margin-top: 20px;">Formulario de solicitud de página web</h1>
+    <form action="#" method="post">
+      <label for="nombre" style="margin-top: 40px;">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" required>
+
+      <label for="tipo-pagina">Tipo de página web:</label>
+      <select id="tipo-pagina" name="tipo-pagina" required>
+        <option value="">Seleccione una opción</option>
+        <option value="Blog">Blog</option>
+        <option value="Tienda en línea">Tienda en línea</option>
+        <option value="Sitio web corporativo">Tienda en línea + App</option>
+        <option value="Sitio web corporativo">Sitio web corporativo</option>
+        <option value="Otro">Otro</option>
+      </select>
+      
+      <label for="funcionalidades">Nombre de la empresa:</label>
+      <textarea id="nempresa" name="nempresa" required></textarea>
+
+      <label for="funcionalidades">Funcionalidades requeridas:</label>
+      <textarea id="funcionalidades" name="funcionalidades" required></textarea>
+
+      <label for="diseno">Diseño deseado:</label>
+      <textarea id="diseno" name="diseno" required></textarea>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
